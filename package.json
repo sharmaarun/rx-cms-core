@@ -1,0 +1,31 @@
+{
+  "name": "rx-cms-core",
+  "version": "1.0.0",
+  "description": "Entities, Common modules etc...",
+  "main": "lib/index",
+  "author": "sharmaarun333@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "mocha src/**/*.spec.ts --config .mocharc.json --watch src/**/*.spec.ts ",
+    "develop": "nodemon",
+    "build::lib": "NODE_ENV=production ttsc -P ./tsconfig.lib.json",
+    "build": "NODE_ENV=production ttsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^8.2.2",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7",
+    "ts-loader": "^8.1.0",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "tslib": "^2.2.0",
+    "ttypescript": "^1.5.12",
+    "typedoc": "^0.20.36",
+    "typescript": "^4.2.4"
+  }
+}

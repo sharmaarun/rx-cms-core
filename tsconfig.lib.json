@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.dev.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "removeComments": true,
+    "declaration": true,
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths"
+      }
+    ]
+  }
+}
