@@ -24,7 +24,7 @@ export enum IAPIMethod {
 export interface IAPI {
   name: string;
   title: string;
-  rootPath: string;
+  rootPath?: string;
   config: IEndpointConfig[];
   services?: any;
   model?: IEntity;
