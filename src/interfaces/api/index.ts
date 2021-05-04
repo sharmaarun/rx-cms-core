@@ -26,7 +26,7 @@ export interface IAPI {
   title: string;
   rootPath?: string;
   config: IEndpointConfig[];
-  services?: any;
+  service?: any;
   model?: IEntity;
 }
 
