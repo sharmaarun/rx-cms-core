@@ -9,8 +9,16 @@ export interface IEntity {
 /**
  * Schema properties
  */
- export interface IEntityProp {
-    name: string;
-    type: "id" | "string" | "number" | "email" | "password" | "richtext";
-  }
-  
+export interface IEntityProp {
+  name: string;
+  title?: string;
+  type: any;
+  required?: boolean;
+  private?: boolean;
+  index?: boolean;
+  unique?: boolean;
+  primary?: boolean;
+  ref?: string;
+  enum?: string[];
+  default?: any;
+}
