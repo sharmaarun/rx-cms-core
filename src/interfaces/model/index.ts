@@ -21,4 +21,10 @@ export interface IEntityProp {
   ref?: string;
   enum?: string[];
   default?: any;
+  validations?: TVALIDATION_TYPE[] | string[];
+  min?: number;
+  max?: number;
+  regex?: string;
 }
+
+export type TVALIDATION_TYPE = "required" | "range" | "regex";
