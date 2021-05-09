@@ -38,4 +38,5 @@ export interface IEndpointConfig {
   method: IAPIMethod | IAPIMethod[];
   controller: IAPIController;
   policies?: string[];
+  config?:any;
 }
