@@ -35,7 +35,7 @@ export interface IAPI {
  */
 export interface IEndpointConfig {
   path: string;
-  method: IAPIMethod;
+  method: IAPIMethod | IAPIMethod[];
   controller: IAPIController;
   policies?: string[];
 }
