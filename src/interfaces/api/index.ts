@@ -1,5 +1,4 @@
 import { IEntity } from "interfaces/model";
-
 /**
  * Core api controller structure
  */
@@ -25,18 +24,25 @@ export interface IAPI {
   name: string;
   title: string;
   rootPath?: string;
-  config: IEndpointConfig[];
+  config: IEndpoint[];
   service?: any;
   model?: IEntity;
 }
 
 /**
- * Core endpoint configuration
+ * Endpoint's configuration
  */
 export interface IEndpointConfig {
+  auth?: any;
+}
+
+/**
+ * Core endpoint configuration
+ */
+export interface IEndpoint {
   path: string;
   method: IAPIMethod | IAPIMethod[];
   controller: IAPIController;
   policies?: string[];
-  config?:any;
+  config?: IEndpointConfig;
 }
