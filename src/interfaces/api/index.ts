@@ -30,10 +30,24 @@ export interface IAPI {
 }
 
 /**
+ * CORS policy for endpoint
+ */
+export interface IEndpointCORS {
+  origin?: string[]
+  maxAge?: number
+  headers?: string[]
+  additionalHeaders?: string[];
+  exposedHeaders?: string[];
+  additionalExposedHeaders?: string[];
+  credentials?: boolean
+}
+
+/**
  * Endpoint's configuration
  */
 export interface IEndpointConfig {
   auth?: any;
+  cors?:IEndpointCORS;
 }
 
 /**

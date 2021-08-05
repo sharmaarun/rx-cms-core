@@ -6,6 +6,15 @@ export enum EXTENSION_TYPE {
 }
 
 /**
+ * Extension's frontend descriptor
+ */
+export interface IExtensionFrontend {
+  path: string
+  entry?: string
+  include?: string[]
+}
+
+/**
  * Extension's meta information structure
  */
 export interface IExtensionMeta {
@@ -15,4 +24,5 @@ export interface IExtensionMeta {
   type: EXTENSION_TYPE | string;
   author?: string;
   license?: string;
+  frontend?: IExtensionFrontend;
 }
