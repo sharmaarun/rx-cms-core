@@ -1,4 +1,19 @@
 /**
+ * Core base types
+ */
+export enum TBASE_TYPE {
+  string = "string",
+  number = "number",
+  date = "date",
+  boolean = "boolean",
+  decimal = "decimal",
+  enum = "enum",
+  json = "json",
+  uid = "uid",
+  ref = "ref",
+}
+
+/**
  * core validation types
  */
 export enum TVALIDATION_TYPE {
