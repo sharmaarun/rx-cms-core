@@ -1,4 +1,10 @@
 import { IEntity } from "interfaces/model";
+
+export enum TAPI_ANNOTATIONS {
+  READ_ONLY = "read-only",
+  PRIVATE = "private"
+}
+
 /**
  * Core api controller structure
  */
@@ -27,6 +33,8 @@ export interface IAPI {
   config: IEndpoint[];
   service?: any;
   model?: IEntity;
+  annotations?: TAPI_ANNOTATIONS[];
+  noDefaultHandlers?: boolean;
 }
 
 /**
@@ -43,11 +51,23 @@ export interface IEndpointCORS {
 }
 
 /**
+ * File/Payload upload configuration
+ */
+export interface IEndpointPayloadOpts {
+  output: "data" | "stream" | "file",
+  allow: string
+  parse?:boolean;
+  multipart?:boolean;
+  maxBytes?:number;
+}
+
+/**
  * Endpoint's configuration
  */
 export interface IEndpointConfig {
   auth?: any;
-  cors?:IEndpointCORS;
+  cors?: IEndpointCORS;
+  payload?: IEndpointPayloadOpts
 }
 
 /**
@@ -59,4 +79,5 @@ export interface IEndpoint {
   controller: IAPIController;
   policies?: string[];
   config?: IEndpointConfig;
+  annotations?: TAPI_ANNOTATIONS[]
 }

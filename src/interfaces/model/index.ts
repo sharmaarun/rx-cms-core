@@ -11,6 +11,7 @@ export enum TBASE_TYPE {
   json = "json",
   uid = "uid",
   ref = "ref",
+  mixed = "mixed"
 }
 
 /**
@@ -49,6 +50,7 @@ export interface IEntityProp {
   name: string;
   title?: string;
   type: any;
+  multi?: boolean;
   required?: boolean;
   private?: boolean;
   index?: boolean;
@@ -64,4 +66,7 @@ export interface IEntityProp {
   relation?: TENTITY_RELATION_TYPE | string;
   foreignKey?: string;
   refPath?: string;
+  placeholder?: string;
+  originalProp?: IEntityProp;
+  noTitle?: boolean;
 }
